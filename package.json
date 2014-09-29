@@ -3,12 +3,6 @@
     "version": "1.0.5",
     "node": "0.10.26",
     "author": "david.akhsahalyan@gmail.com",
-    "dependencies": {
-        "express": "4.4.1",
-        "body-parser": "1.8.1",
-        "Underscore" : "1.7.0",
-        "socket.io" : "1.1.0"
-    },
     "scripts": {
         "start": "node server.js"
     }
