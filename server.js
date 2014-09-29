@@ -1,4 +1,6 @@
-var appPort = process.env.PORT || 8080;
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var appPort = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+
 
 // Librairies
 
@@ -9,7 +11,7 @@ var express = require('express'),
     io = require('socket.io')(server);
 
 app.use(express.static(__dirname + '/public'));
-server.listen(appPort, function(){
+server.listen(appPort, ipaddress, function(){
     console.log("Listening on port " + appPort);
 });
 var onlineUsers = {};
