@@ -1,0 +1,28 @@
+{
+    "name": "angular-requirejs-seed",
+    "description": "AngularJS seed project modified for requireJS support.",
+    "version": "0.2.0",
+    "homepage": "https://github.com/tnajdek/angular-requirejs-seed",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "bower_components"
+    ],
+    "dependencies": {
+        "angular": "~1.2.1",
+        "angular-route": "~1.2.1",
+        "angular-resource": "~1.2.1",
+        "requirejs": "~2.1.9",
+        "html5-boilerplate": "~4.3.0",
+        "angular-bootstrap": "~0.11.0",
+        "bootstrap": "3.1.1",
+        "less": "~1.7.3",
+        "nprogress": "0.1.6",
+        "i18next": "1.7.3",
+        "ng-i18next": "0.3.2",
+        "angular-cookies": "1.2.20",
+        "ng-file-upload": "~1.6.1",
+        "lodash": "2.4.1",
+        "socket.io-client": "1.1.0"
+    }
+}

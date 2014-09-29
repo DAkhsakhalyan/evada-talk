@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="evadaTalk">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Evada Talk</title>
+    <link rel="stylesheet" href="app/bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="app/bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel='stylesheet' href='app/bower_components/nprogress/nprogress.css'/>
+    <link rel="stylesheet" href="app/css/animation/animation.css"/>
+    <link rel="stylesheet" href="app/css/animation/transition.css"/>
+    <link rel="stylesheet/less" href="app/css/style.less"/>
+    <link rel="icon" type="image/png" href="app/img/E-favicon.png">
+</head>
+<body ng-controller="RootCtrl">
+<div ng-class="{'ng-hide-remove': loaded}" style="display: none">
+    <div class="overlay" ng-show="isMobile">
+        <div class="popup">
+            <div class="text">{{"dialog.MOBILE_DEVICE" | i18next}}</div>
+            <div>
+                <div class="popup_button" ng-click="accept()">{{"button.OK" | i18next}}</div>
+            </div>
+
+        </div>
+    </div>
+    <div id="main_container">
+        <div id="localization">
+            <div ng-repeat="local in locales" ng-click="onLocaleChange(local)" class="lang lang_{{local.key}}" ng-class="{'active': local.key == selectedLocale.key}"></div>
+        </div>
+        <div ng-controller="VideoCtrl">
+            <div ng-show="isVisible && isLogged" class="overlay">
+                <video id="video" autoplay="autoplay"></video>
+            </div>
+        </div>
+        <div id="home_cont">
+
+            <div id="header" ng-controller="AuthCtrl">
+                <div ng-show="isLogged">
+                    <et-profile-menu user="user" action="logOut()"></et-profile-menu>
+                </div>
+
+                <!--<div id="profile" >-->
+                    <!--<div id="profile_photo"><img class="photograph" ng-src='app/img/{{user.imgPath}}'/></div>-->
+                    <!--<div class="name">{{user.name}}</div>-->
+                <!--</div>-->
+                <!--<div class="profile_menu">-->
+                    <!--<div class="profile_menu_item">{{'home.SETTINGS' | i18next}}</div>-->
+                    <!--<div class="profile_menu_item">{{'home.LOGOUT' | i18next}}</div>-->
+                <!--</div>-->
+                <!--
+                    http://stackoverflow.com/questions/16151595/trigger-click-event-from-angularjs-directive
+                    http://www.ng-newsletter.com/posts/directives.html
+                -->
+            </div>
+            <div id="middle_container" ng-show="isLogged" ng-class="{'smallMenu': smallMenu}">
+                <div class="middle_menu">
+                    <div class="cyrcle" id="{{item.id}}" ng-repeat="item in menu" ng-click="selectMenu(item)" ng-class="{'selected_menu': item.id == selectedMenu}" ng-show="item.visible"><div>{{item.title | i18next}}</div></div>
+                </div>
+            </div>
+        </div>
+        <div ng-view>
+
+        </div>
+    </div>
+</div>
+
+
+<script data-main="app/js/main" src="app/bower_components/requirejs/require.js"></script>
+</body>
+</html>

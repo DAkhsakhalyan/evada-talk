@@ -1,0 +1,24 @@
+{
+    "login": {
+        "USERNAME" : "Логин",
+        "PASSWORD" : "Пароль",
+        "LOGIN" : "Войти",
+        "SIGNUP" : "Регистрация",
+        "FILL_ALL_FIELD": "Заполните все поля",
+        "INCORRECTLP": "Неправильный Логин или пароль"
+    },
+    "home": {
+        "CONTACTS" : "Контакты",
+        "HISTORY" : "Журналы",
+        "MESSAGES" : "Сообщения",
+        "HOME" : "Главная",
+        "SETTINGS" : "Настройки",
+        "LOGOUT" : "Выход"
+    },
+    "button": {
+        "OK" : "ОК"
+    },
+    "dialog": {
+        "MOBILE_DEVICE": "Вы зашли с мобильного устройста"
+    }
+}

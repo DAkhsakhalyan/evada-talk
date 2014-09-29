@@ -1,0 +1,24 @@
+{
+    "login": {
+        "USERNAME" : "Username",
+        "PASSWORD" : "Password",
+        "LOGIN" : "Log In",
+        "SIGNUP" : "Sign Up",
+        "FILL_ALL_FIELD": "Fill In All Fields",
+        "INCORRECTLP": "Incorrect login or Password"
+    },
+    "home": {
+        "CONTACTS" : "Contacts",
+        "HISTORY" : "History",
+        "MESSAGES" : "Messages",
+        "HOME" : "Home",
+        "SETTINGS" : "Settings",
+        "LOGOUT" : "Log Out"
+    },
+    "button": {
+        "OK" : "OK"
+    },
+    "dialog": {
+        "MOBILE_DEVICE": "You have login with mobile device"
+    }
+}

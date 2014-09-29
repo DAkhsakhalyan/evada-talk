@@ -1,0 +1,17 @@
+<div id="login_container">
+    <div id="login_evada_logo"></div>
+    <div id="login_form_container">
+        <form ng-submit="login(login.username, login.password)">
+            <div>
+                <input placeholder="{{'login.USERNAME' | i18next}}" class="login_input" ng-model="login.username" ng-class="{incorrect: incorrectUsername}">
+                <input placeholder="{{'login.PASSWORD' | i18next}}" class="login_input" type="password" ng-model="login.password" ng-class="{incorrect: incorrectPassword}">
+            </div>
+            <div>
+                <div id="loginerrors" ng-show="errorMessage">{{errorMessage | i18next}}!</div>
+                <div id="sign_up">{{'login.SIGNUP' | i18next}}</div>
+            </div>
+            <input type="submit" id="hide_submite" value="Submit" />
+            <div id="submite_btn" ng-click="login(login.username, login.password)">{{'login.LOGIN' | i18next}}</div>
+        </form>
+    </div>
+</div>

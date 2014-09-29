@@ -1,0 +1,17 @@
+<div id="contacts_container">
+    <div class="contact_item" ng-repeat="contact in contacts">
+        <div class="contact_name">{{contact.name}}</div>
+        <div class="buttons">
+            <div class="call button" ng-click="call(contact)"></div>
+            <div class="message button" ng-click="sendMessage(contact)"></div>
+        </div>
+        <div class="hover_back">
+
+            <div class="outer_div">
+                <div class="inner_div">
+                    <img class="photo" ng-src='app/img/{{contact.imgPath}}'/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+body {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}
+#main_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #d74343;
+}
+#localization {
+  position: relative;
+  z-index: 2;
+  float: right;
+}
+.lang {
+  background: url("../img/lang.png") no-repeat;
+  float: left;
+  height: 40px;
+  margin: 6px;
+  width: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.lang_en-US {
+  background-position: center -4px;
+}
+.lang_ru-RU {
+  background-position: center -81px;
+}
+.lang:hover {
+  border: 3px solid #fff;
+}
+.lang.active {
+  border: 3px solid #fff;
+}
+.ng-hide-remove {
+  display: block !important;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+}

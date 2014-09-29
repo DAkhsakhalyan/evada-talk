@@ -1,0 +1,10 @@
+<div class="et-profile-menu">
+    <div id="profile">
+        <div id="profile_photo"><img class="photograph" ng-src='app/img/{{user.imgPath}}'/></div>
+        <div class="name">{{user.name}}</div>
+    </div>
+    <div class="profile_menu">
+        <div class="profile_menu_item">{{'home.SETTINGS' | i18next}}</div>
+        <div class="profile_menu_item" ng-click="action()">{{'home.LOGOUT' | i18next}}</div>
+    </div>
+</div>
